@@ -1,0 +1,143 @@
+html {
+    box-sizing: border-box;
+    background: #161616;
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    min-height: 520px;
+    grid-template-columns: repeat(4, 85px);
+    grid-template-rows: repeat(5, 85px);
+    grid-gap: 3px;
+    grid-template-areas: "result result result result" "clear delete divide multiply" "seven eight nine minus" "four five six equals" "one two three plus" "zero zero bottom plus";
+    margin-top: 100px;
+}
+
+#zero {
+    grid-area: zero;
+}
+
+#decimal {
+    grid-area: bottom;
+}
+
+#plus {
+    grid-area: plus;
+}
+
+#equals {
+    grid-area: equals;
+}
+
+#minus {
+    grid-area: minus;
+}
+
+#multiply {
+    grid-area: multiply;
+}
+
+#divide {
+    grid-area: divide;
+}
+
+#ac {
+    grid-area: clear;
+    color: white;
+    background-color: #fb3640;
+}
+
+#del {
+    grid-area: delete;
+    color: white;
+    background-color: #fb3640;
+}
+
+#one {
+    grid-area: one;
+}
+
+#two {
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+#seven {
+    grid-area: seven;
+}
+
+#eight {
+    grid-area: eight;
+}
+
+#nine {
+    grid-area: nine;
+}
+
+#result {
+    grid-area: result;
+    border: 1px solid black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #d8d8d8;
+}
+
+.total {
+    /* margin-right: 10px;
+    margin-top: 20px;
+    padding: 0px;
+    height: 50px; */
+    font-size: 40px;
+    margin: 4px;
+}
+
+.ops {
+    font-size: 16px;
+    color: rgba(119, 117, 117, 0.856);
+    margin: 2px;
+}
+
+.num {
+    background-color: #542e71;
+    font-family: 'Dancing Script', cursive;
+}
+
+.operator {
+    background-color: #a799b7;
+}
+
+.container>button {
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid black;
+}
